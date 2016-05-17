@@ -109,19 +109,25 @@ function clicked(value){
 
 	} else {
 		//spymaster mode
-			document.getElementById(value).style.backgroundColor = COLOR_GREEN;
+    if (document.getElementById(value).style.backgroundColor === COLOR_GREEN) {
+      document.getElementById(value).style.backgroundColor = teams[value];
+    } else {
+      document.getElementById(value).style.backgroundColor = COLOR_GREEN;
+    }
 	}
 }
 
 function spyMaster(){
 	//TODO: randomize or organize tiles for easier comparing
-	spyMasterMode = true;
-	for(var i = 0; i < NUMBER_OF_WORDS; i++){
-		document.getElementById(i).style.backgroundColor = teams[i];
-		if (teams[i] == "black"){
-			document.getElementById(i).style.color = "white";
-		}
-	}
+  if (window.confirm("Are you sure you are the Spy Master?")) {
+    spyMasterMode = true;
+    for(var i = 0; i < NUMBER_OF_WORDS; i++){
+      document.getElementById(i).style.backgroundColor = teams[i];
+      if (teams[i] == "black"){
+        document.getElementById(i).style.color = "white";
+      }
+    }
+  }
 }
 
 function shuffle(array) {
