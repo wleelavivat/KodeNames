@@ -109,9 +109,11 @@ function clicked(value){
 
 	} else {
 		//spymaster mode
-    if (document.getElementById(value).style.backgroundColor === COLOR_GREEN) {
+    if (document.getElementById(value).getAttribute("toggle-color") === "false") {
+      document.getElementById(value).setAttribute("toggle-color", "true");
       document.getElementById(value).style.backgroundColor = teams[value];
     } else {
+      document.getElementById(value).setAttribute("toggle-color", "false");
       document.getElementById(value).style.backgroundColor = COLOR_GREEN;
     }
 	}
