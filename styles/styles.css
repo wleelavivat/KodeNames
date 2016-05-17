@@ -3,6 +3,10 @@ a:visited {color: black;}   /* visited link */
 a:hover {color: black;}     /* mouse over link */
 a:active {color: black;}    /* selected link */
 
+a {
+  text-decoration: none;
+}
+
 html {
 	font-family : "Verdana";
 }
@@ -12,7 +16,7 @@ html {
 }
 
 button, input, span#first {
-	font-size : 1.3em;	
+	font-size : 1.3em;
 }
 
 #board {
@@ -79,7 +83,7 @@ button, input, span#first {
 }
 
 #confirmText {
-	float : right;	
+	float : right;
 }
 #google_translate_element {
 	float: right;
@@ -93,5 +97,5 @@ button, input, span#first {
   position: absolute;
   overflow: hidden;
   top: -10px;
- 
+
 }

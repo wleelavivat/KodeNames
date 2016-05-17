@@ -1,5 +1,5 @@
 /*
-Notes: 
+Notes:
 'data' is lazily imported from the html
 'seedrandom' is also imported from html. it gives deterministic random #s based on a seed set in fire()
 */
@@ -11,11 +11,11 @@ var NUMBER_OF_WORDS = 25;
 var spyMasterMode = false;
 var sessionData = [];
 
-var COLOR_RED = "#ff0000";
-var COLOR_YELLOW = "#ffff00";
-var COLOR_BLUE = "#00eeee";
+var COLOR_RED = "#ff4d4d";
+var COLOR_YELLOW = "#ffd11a";
+var COLOR_BLUE = "#4d94ff";
 var COLOR_BLACK = "#808080";
-var COLOR_GREEN = "#009000";
+var COLOR_GREEN = "#00b33c";
 
 function fire(){
 	//get seed and set the seed for randomizer
@@ -41,7 +41,7 @@ function removeItem(array, index){
 	}
 }
 
-function createNewGame(){	
+function createNewGame(){
 	var trs = [];
 	for(var i = 0; i < NUMBER_OF_WORDS; i++){
 		if (!trs[i%5]){
@@ -75,8 +75,8 @@ function createNewGame(){
 		document.getElementById("team").style.color = COLOR_BLUE;
 		document.getElementById("team").innerHTML = "BLUE";
 	}
-	
-	// add neturals 
+
+	// add neturals
 	for(var i = 0; i < 7; i++){
 		teams.push(COLOR_YELLOW);
 	}
@@ -106,10 +106,10 @@ function clicked(value){
 				document.getElementById(value).style.color = "white";
 			}
 		}
-			
+
 	} else {
 		//spymaster mode
-			document.getElementById(value).style.backgroundColor = COLOR_GREEN;	
+			document.getElementById(value).style.backgroundColor = COLOR_GREEN;
 	}
 }
 
